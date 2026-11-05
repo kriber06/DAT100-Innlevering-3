@@ -31,7 +31,7 @@ public class Bilde extends Tekst {
 
 	@Override
 	public String toString() {
-		return super.toString() + "\n" + url + "\n";
+		return super.toString() + url + "\n";
 
 	}
 
