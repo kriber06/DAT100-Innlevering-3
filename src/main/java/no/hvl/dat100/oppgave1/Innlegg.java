@@ -19,7 +19,6 @@ public abstract class Innlegg {
 		this.bruker = bruker;
 		this.dato = dato;
 		this.like = 0;
-		throw new UnsupportedOperationException(TODO.constructor("Innlegg"));
 	}
 
 	public Innlegg(int id, String bruker, String dato, int likes) {
@@ -28,8 +27,6 @@ public abstract class Innlegg {
 		this.bruker = bruker;
 		this.dato = dato;
 		this.like = likes;
-		
-		throw new UnsupportedOperationException(TODO.constructor("Innlegg"));
 	}
 	
 	public String getBruker() {return bruker;}
