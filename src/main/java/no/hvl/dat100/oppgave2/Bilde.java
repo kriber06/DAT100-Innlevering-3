@@ -27,7 +27,7 @@ public class Bilde extends Tekst {
 
 	@Override
 	public String toString() {
-		return "BILDE" + "\n" + super.toString() + "\n" + url;
+		return "BILDE" + "\n" + super.toString() + "\n" + url + "\n";
 
 	}
 
