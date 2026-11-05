@@ -2,11 +2,12 @@ package no.hvl.dat100.oppgave3;
 
 import no.hvl.dat100.common.TODO;
 import no.hvl.dat100.oppgave1.*;
+import no.hvl.dat100.oppgave2.Bilde;
 
 public class Blogg {
 
 	private Innlegg[] innleggtabell;
-	private int nesteledig;
+	private int nesteledig = 0;
 	public Blogg() {
 		innleggtabell = new Innlegg[20];
 	}
@@ -24,26 +25,49 @@ public class Blogg {
 	}
 	
 	public int finnInnlegg(Innlegg innlegg) {
-
-		throw new UnsupportedOperationException(TODO.method());
+		int temp = -1;
+		for (int i = 0; i < nesteledig; i++) {
+			if (innlegg.erLik(innleggtabell[i])){
+				temp = 1;
+				break;
+			}
+		}
+		return temp;
 	}
 
 	public boolean finnes(Innlegg innlegg) {
-		throw new UnsupportedOperationException(TODO.method());
+		for (int i = 0; i < nesteledig; i++) {
+			if (innlegg.erLik(innleggtabell[i])) {
+				return true;
+			}
+		}
+		return false;
 	}
 
 	public boolean ledigPlass() {
-		throw new UnsupportedOperationException(TODO.method());
-
+		boolean ledig = true;
+		if (nesteledig == innleggtabell.length){
+			ledig = false;
+		}
+		return ledig;
 	}
 	
 	public boolean leggTil(Innlegg innlegg) {
-
-		throw new UnsupportedOperationException(TODO.method());
+		boolean lagtTil = false;
+			if (ledigPlass() && !finnes(innlegg)){
+				innleggtabell[nesteledig] = innlegg;
+				nesteledig++;
+				lagtTil = true;
+			}
+		return lagtTil;
 	}
 	
 	public String toString() {
-		throw new UnsupportedOperationException(TODO.method());
+		String temp = nesteledig + "\n";
+		for(int i = 0; i < nesteledig; i++){
+			temp += innleggtabell[i];
+		}
+		return temp;
 	}
 
 	// valgfrie oppgaver nedenfor
