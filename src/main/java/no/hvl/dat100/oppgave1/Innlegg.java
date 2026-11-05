@@ -18,7 +18,6 @@ public abstract class Innlegg {
 		this.id = id;
 		this.bruker = bruker;
 		this.dato = dato;
-		this.like = 0;
 	}
 
 	public Innlegg(int id, String bruker, String dato, int likes) {
@@ -48,13 +47,9 @@ public abstract class Innlegg {
 	public void doLike () {
 		this.like++;
 	}
-	
+
 	public boolean erLik(Innlegg innlegg) {
-		boolean temp = false;
-				if(id == innlegg.getId()){
-					temp = true;
-		}
-        return temp;
+        return this.id == innlegg.getId();
 	}
 	
 	@Override
