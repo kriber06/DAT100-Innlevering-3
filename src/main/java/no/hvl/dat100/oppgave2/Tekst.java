@@ -26,9 +26,13 @@ public class Tekst extends Innlegg {
 		this.tekst = tekst;
 	}
 
+	protected String type() {
+		return "TEKST";
+	}
+
 	@Override
 	public String toString() {
-		return this.getClass() + super.toString() + "\n" + tekst + "\n";
+		return  type() + "\n" + super.toString() + "\n" + tekst + "\n";
 	}
 	
 	// Metoden nedenfor er kun for valgfri oppgave 6
