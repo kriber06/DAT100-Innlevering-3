@@ -4,7 +4,6 @@ import no.hvl.dat100.common.TODO;
 
 public class Bilde extends Tekst {
 
-	// TODO - objekt variable
 	private String url;
 	
 	public Bilde(int id, String bruker, String dato, String tekst, String url) {
@@ -27,7 +26,7 @@ public class Bilde extends Tekst {
 
 	@Override
 	public String toString() {
-		return "BILDE" + "\n" + super.toString() + "\n" + url;
+		return super.toString() + "\n" + url;
 
 	}
 
