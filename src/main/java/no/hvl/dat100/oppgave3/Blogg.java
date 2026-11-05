@@ -8,20 +8,19 @@ public class Blogg {
 	private Innlegg[] innleggtabell;
 	private int nesteledig;
 	public Blogg() {
-
+		innleggtabell = new Innlegg[20];
 	}
 
 	public Blogg(int lengde) {
-		throw new UnsupportedOperationException(TODO.constructor("Blogg"));
+		innleggtabell = new Innlegg[lengde];
 	}
 
 	public int getAntall() {
-		throw new UnsupportedOperationException(TODO.method());
+		return nesteledig;
 	}
 	
 	public Innlegg[] getSamling() {
-		throw new UnsupportedOperationException(TODO.method());
-
+		return innleggtabell;
 	}
 	
 	public int finnInnlegg(Innlegg innlegg) {

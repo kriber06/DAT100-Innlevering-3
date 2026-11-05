@@ -50,7 +50,10 @@ public abstract class Innlegg {
 	}
 	
 	public boolean erLik(Innlegg innlegg) {
-		boolean temp = innlegg.id == innlegg.getId();
+		boolean temp = false;
+				if(id == innlegg.getId()){
+					temp = true;
+		}
         return temp;
 	}
 	
