@@ -5,11 +5,9 @@ import no.hvl.dat100.oppgave1.*;
 
 public class Tekst extends Innlegg {
 
-	// TODO: objektvariable
 	private String tekst;
 	
 	public Tekst () {
-		
 	}
 	
 	public Tekst(int id, String bruker, String dato, String tekst) {
@@ -22,18 +20,19 @@ public class Tekst extends Innlegg {
 		this.tekst = tekst;
 	}
 	
-	public String getTekst() {
-		return tekst;
-	}
+	public String getTekst() {return tekst;}
 
 	public void setTekst(String tekst) {
 		this.tekst = tekst;
 	}
 
+	protected String type() {
+		return "TEKST";
+	}
+
 	@Override
 	public String toString() {
-		return "TEKST" + "\n" + super.toString() + tekst + "\n";
-
+		return  type() + "\n" + super.toString() + "\n" + tekst + "\n";
 	}
 	
 	// Metoden nedenfor er kun for valgfri oppgave 6
